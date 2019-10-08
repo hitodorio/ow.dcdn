@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myCtl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="HitoDorio" />
+    <title>DCDN.ow – decentralized content distribution network</title>
+    <meta name="description" content="decentralized content distribution network">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- add styles -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+ 
+     <!-- add javascripts -->
+    <script src="http://dcdn-0.ow/jquery.js"></script>
+      <script data-require="angular.js@1.4.2" data-semver="1.4.2" src="http://dcdn-0.ow/ang142.js"></script>
+      <script src="http://dcdn-0.ow/ang142route.js"></script>
+    <script src="http://dcdn.ow/content/dcdn.js"></script>
+    
+    
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
+	      <link href="http://dcdn-0.ow/bootstrap3.css" rel="stylesheet" data-semver="3.3.4" data-require="bootstrap-css@3.3.4" />
+	      
+    <link rel="stylesheet" href="http://dcdn-0.ow/ng-table.css" />
+    
+    <script src="http://dcdn-0.ow/ng-table.min.js"></script>
+
+
+
+
+    
+    
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <!-- logo -->
+            <img class="logo" src="images/dcdn_ow.gif" />
+
+            <!-- navigation menu -->
+            <nav>
+                <ul>
+                    <li><a id="indexBtn" href="http://index.ow/" ng-class="{activeSmall:part == 'index'}" >inDEX</a></li>
+                     <li><a id="searchBtn" href="http://search.ow/#!/search" ng-class="{activeSmall:part == 'search'}" >search</a></li>
+                     <li><a id="dcdnBtn" href="http://dcdn.ow/#!/search" ng-class="{activeSmall:part == 'dcdn'}" >dcdn</a></li>
+                    <li><a id="aboutBtn" href="http://n.ow/#!/about" ng-class="{activeSmall:part == 'about'}">about</a></li>
+                  
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  
+
+    <!-- main content -->
+    <div style="position:relative">
+       
+       <div class="ow">
+        <div ng-controller="myCtl" ng-app="app">
+	        
+	        <div class="row ">
+		                
+				
+	        
+      
+<div ng-repeat="(key, value) in data" >
+<div class="col-sm-12">
+        <h2>{{key}}</h2>
+			<div ng-repeat="(keyz, valuez) in value" class="col-sm-12" style="vertical-align: top">
+			        <div class="col-sm-3">
+			        <h4>{{keyz}}</h4>
+					</div>
+			<div class="col-sm-9">
+				        <div ng-repeat="(keyd, valued) in valuez" class="col-sm-12" style="margin-bottom: 5px">
+			      <div class="col-sm-3">{{valued}}: </div><div class="col-sm-9"><input onClick="this.setSelectionRange(0, this.value.length)" value="http://dcdn-0.ow/{{valued}}" style="width: 80%" /></div>
+				        </div>
+			</div>      
+			</div>	 
+			</div>	 </div>       
+	        
+</div>
+ 
+ 
+        
+    </div>
+
+       </div>
+       
+    </div>
+
+</body>
+</html>
